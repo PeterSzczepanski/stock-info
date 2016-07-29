@@ -1,0 +1,27 @@
+<div>
+  <div class='form-group'>
+    {{ input name='company-name' class='form-control' value=name key-up='event' placeholder='Company Name' }}
+  </div>
+  <div class="container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Company Name</th>
+          <th>Exchange</th>
+          <th>Symbol</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |stock| }}
+          <tr>
+            <td>{{stock.id}}</td>
+            <td>{{stock.name}}</td>
+            <td>{{stock.exchange}}</td>
+            <td>{{stock.symbol}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
